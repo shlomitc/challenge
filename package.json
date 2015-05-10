@@ -1,0 +1,19 @@
+{
+  "name": "challenge",
+  "version": "0.0.0",
+  "description": "> TL;DR > Create awesome stuff and win an Apple Macbook Pro.",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shlomitc/challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shlomitc/challenge/issues"
+  },
+  "homepage": "https://github.com/shlomitc/challenge"
+}

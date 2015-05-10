@@ -1,0 +1,29 @@
+*{
+	font-family: Futura-pt, Arial;
+}
+
+#yglf{
+	font-family: Futura-pt, Arial;
+	text-transform: uppercase;
+	width: 613px;
+	height: 448px;
+	padding: 60px;
+	display: inline-block;
+	box-sizing: border-box;
+	white-space: nowrap;
+	color: white;
+	border: solid 7px currentColor;
+	background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;
+	position: absolute;
+	top: calc(50vh - 224px);
+	left: calc(50vw - 306px);
+}
+
+.yglfBackground{
+
+}
+
+.yglfLogo{
+	font-size: 64px;
+	letter-spacing: 15px;
+}
