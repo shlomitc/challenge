@@ -23,17 +23,17 @@ function omitChars(arr, numToOmit){
 
 
 
-var GameHeader = React.createClass({
+var YglfHeader = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<span>Think fast</span>|<GameTimer/>
+				<span>Think fast</span>|<YglfTimer/>
 			</div>
 		);
 	}
 });
 
-var GameTimer = React.createClass({
+var YglfTimer = React.createClass({
 	render: function(){
 		return (
 			<span>0</span>
@@ -41,28 +41,28 @@ var GameTimer = React.createClass({
 	}
 });
 
-var GameBoard = React.createClass({
+var YglfBoard = React.createClass({
 	render: function(){
 		return (
-			<div>
+			<div className="yglfBoard">
 				<h1>board</h1>
 			</div>
 		);
 	}
 });
 
-var GameYglf = React.createClass({
+var Yglf = React.createClass({
 	render: function(){
 		return (
-			<div className="yglfBackground">
-				<GameHeader />
-				<GameBoard />
+			<div>
+				<YglfHeader />
+				<YglfBoard />
 			</div>
 		);
 	}
 });
 
 React.render(
-	<GameYglf />,
+	<Yglf />,
 	document.getElementById('yglf')
 );

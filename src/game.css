@@ -1,8 +1,8 @@
-*{
-	font-family: Futura-pt, Arial;
+#yglf{
+
 }
 
-#yglf{
+.yglfBoard{
 	font-family: Futura-pt, Arial;
 	text-transform: uppercase;
 	width: 613px;
@@ -19,11 +19,7 @@
 	left: calc(50vw - 306px);
 }
 
-.yglfBackground{
-
-}
-
-.yglfLogo{
+.yglfHeader{
 	font-size: 64px;
 	letter-spacing: 15px;
 }
