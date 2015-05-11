@@ -2,7 +2,7 @@
 
 }
 
-.yglfBoard{
+.yglfGame{
 	font-family: Futura-pt, Arial;
 	text-transform: uppercase;
 	width: 613px;
@@ -17,6 +17,11 @@
 	position: absolute;
 	top: calc(50vh - 224px);
 	left: calc(50vw - 306px);
+}
+
+.yglfLogo{
+	font-size: 64px;
+	letter-spacing: 15px;
 }
 
 .yglfHeader{

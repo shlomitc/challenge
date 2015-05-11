@@ -1,39 +1,24 @@
-function init (){
-	var logo = ['Y','O','U', ' ',
-	'G','O','T','T','A', ' ',
-	'L','O','V','E', ' ',
-	'F','R','O','N','T','E','N','D'];
-	return logo;
-}
 
-function omitChars(arr, numToOmit){
-	var selectedIndices = [], rand;
-
-	if(!arr || !arr.length || !numToOmit){
-		return;
-	}
-
-	while(selectedIndices.length === numToOmit){
-		rand = Math.floor(Math.random() * arr.length);
-		if(arr[rand] !== ' ' && selectedIndices.indexOf(rand) === -1){
-			selectedIndices.push(rand);
-		}
-	}
-}
 
 
 
 var YglfHeader = React.createClass({
+	getInitialState: function () {
+		return {time: 0};
+	},
 	render: function(){
 		return (
 			<div>
-				<span>Think fast</span>|<YglfTimer/>
+				<span>Think fast</span>|<YglfTimer timer={this.state.time}/>
 			</div>
 		);
 	}
 });
 
 var YglfTimer = React.createClass({
+	componentDidMount : function(){
+		return;
+	},
 	render: function(){
 		return (
 			<span>0</span>
@@ -41,25 +26,69 @@ var YglfTimer = React.createClass({
 	}
 });
 
-var YglfBoard = React.createClass({
+var YglfGame = React.createClass({
+	getInitialState: function () {
+		var full = this.props.game.full;
+		var omitted = this.props.game.omitted;
+		return {logo: omitted};
+	},
+	componentDidMount: function(logo){
+		//TODO - update guess
+	},
 	render: function(){
+		var lines = [];
+		this.state.logo.split(' ').forEach(function (word) {
+			lines.push(<div> {word} </div>);
+		});
+
 		return (
-			<div className="yglfBoard">
-				<h1>board</h1>
+			<div className="yglfGame">
+				<div className="yglfLogo">
+					{lines}
+				</div>
 			</div>
 		);
 	}
 });
 
 var Yglf = React.createClass({
+	init: function(){
+		var full = 'you gotta love frontend',
+			numToOmit = Math.floor(full.split(' ').join('').length * Math.random()) || 1;
+		return {
+			game: this.createGame(full, numToOmit)
+		};
+	},
+	createGame: function (full, numToOmit) {
+		var selectedIndices = [],
+			rand, omitted;
+
+		omitted = full.split('');
+		while (selectedIndices.length < numToOmit) {
+			rand = Math.floor(Math.random() * full.length);
+			if (full[rand] !== ' ' && selectedIndices.indexOf(rand) === -1) {
+				selectedIndices.push(rand);
+				omitted[rand] = '_';
+			}
+		}
+
+		return {
+			full: full,
+			omitted: omitted.join(''),
+			indices: selectedIndices
+		}
+	},
+	getInitialState: function () {
+		return this.init();
+	},
 	render: function(){
 		return (
 			<div>
-				<YglfHeader />
-				<YglfBoard />
+				<YglfHeader/>
+				<YglfGame game={this.state.game}/>
 			</div>
-		);
-	}
+			);
+		}
 });
 
 React.render(
