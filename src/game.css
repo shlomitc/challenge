@@ -14,7 +14,7 @@ body{
 	font-family: Futura-pt, Arial;
 	width: 613px;
 	height: 448px;
-	padding: 60px;
+	padding: 50px;
 	display: inline-block;
 	box-sizing: border-box;
 	white-space: nowrap;
@@ -31,6 +31,10 @@ body{
 	letter-spacing: 15px;
 }
 
+.yglfLogo .word{
+	margin: 10px 0;
+}
+
 .yglfHeader{
 	/*background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;*/
 	width: 600px;
@@ -40,4 +44,41 @@ body{
 	left: calc(50vw - 300px);
 	font-size: 20px;
 	letter-spacing: 3px;
+}
+
+.yglfFooter{
+	font-size: 30px;
+	letter-spacing: 10px;
+	text-align: center;
+	width: 30px;
+	height: 40px;
+
+	position: absolute;
+	top: calc(50vh + 244px);
+	left: calc(50vw + 0px);
+}
+
+.yglfHeader .blinking-cursor {
+	font-size: 25px;
+	color: white;
+	-webkit-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+	from, to {
+		color: transparent;
+	}
+	50% {
+		color: white;
+	}
+}
+
+@-webkit-keyframes "blink" {
+	from, to {
+		color: transparent;
+	}
+	50% {
+		color: white;
+	}
 }
