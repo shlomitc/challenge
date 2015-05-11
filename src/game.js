@@ -8,8 +8,8 @@ var YglfHeader = React.createClass({
 	},
 	render: function(){
 		return (
-			<div>
-				<span>Think fast</span>|<YglfTimer timer={this.state.time}/>
+			<div className="yglfHeader">
+				<span>A true frontend must type fast</span> | <YglfTimer timer={this.state.time}/>
 			</div>
 		);
 	}
@@ -21,7 +21,7 @@ var YglfTimer = React.createClass({
 	},
 	render: function(){
 		return (
-			<span>0</span>
+			<span>...</span>
 		);
 	}
 });

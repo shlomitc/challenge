@@ -1,10 +1,17 @@
+body{
+	background: black;
+	margin: 10px;
+}
 #yglf{
-
+	width:100%;
+	height:100%;
+	background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;
+	color: white;
+	text-transform: uppercase;
 }
 
 .yglfGame{
 	font-family: Futura-pt, Arial;
-	text-transform: uppercase;
 	width: 613px;
 	height: 448px;
 	padding: 60px;
@@ -13,7 +20,7 @@
 	white-space: nowrap;
 	color: white;
 	border: solid 7px currentColor;
-	background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;
+	/*background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;*/
 	position: absolute;
 	top: calc(50vh - 224px);
 	left: calc(50vw - 306px);
@@ -25,6 +32,12 @@
 }
 
 .yglfHeader{
-	font-size: 64px;
-	letter-spacing: 15px;
+	/*background: linear-gradient(rgb(9, 97, 197), rgb(0, 208, 157), rgb(0, 208, 157)) no-repeat;*/
+	width: 600px;
+	height: 40px;
+	position: absolute;
+	top: calc(50vh - 264px);
+	left: calc(50vw - 300px);
+	font-size: 20px;
+	letter-spacing: 3px;
 }
