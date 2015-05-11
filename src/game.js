@@ -9,7 +9,7 @@ var YglfHeader = React.createClass({
 	render: function(){
 		return (
 			<div className="yglfHeader">
-				<span>A true frontend must type fast </span> <span className="blinking-cursor">_</span> <YglfTimer timer={this.state.time}/>
+				<span className="left">A true frontend must type fast </span> <span className="blinking-cursor">_</span> <YglfTimer timer={this.state.time}/>
 			</div>
 		);
 	}
@@ -21,7 +21,7 @@ var YglfTimer = React.createClass({
 	},
 	render: function(){
 		return (
-			<span>123.92</span>
+			<span className="yglfTimer right">123.92</span>
 		);
 	}
 });
@@ -86,7 +86,7 @@ var Yglf = React.createClass({
 			<div>
 				<YglfHeader/>
 				<YglfGame game={this.state.game}/>
-				<div className="yglfFooter">GO!</div>
+				<div className="yglfFooter">GO! (or hit space)</div>
 			</div>
 			);
 		}

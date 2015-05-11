@@ -46,18 +46,6 @@ body{
 	letter-spacing: 3px;
 }
 
-.yglfFooter{
-	font-size: 30px;
-	letter-spacing: 10px;
-	text-align: center;
-	width: 30px;
-	height: 40px;
-
-	position: absolute;
-	top: calc(50vh + 244px);
-	left: calc(50vw + 0px);
-}
-
 .yglfHeader .blinking-cursor {
 	font-size: 25px;
 	color: white;
@@ -81,4 +69,20 @@ body{
 	50% {
 		color: white;
 	}
+}
+
+.left{
+	float: left;
+}
+.right{
+	float:right;
+}
+
+.yglfFooter{
+	font-size: 30px;
+	letter-spacing: 3px;
+	height: 40px;
+	position: absolute;
+	top: calc(50vh + 244px);
+	left: calc(50vw - 150px);
 }
